@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-Variable zone-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-CONFIG=$HOME/$CONFIG/config # Example /home/haqq-2/.haqqd/config
-CHAIN=$CHAIN # Example haqq_54211-3
+CONFIG=/root/.story/story/config
+CHAIN="iliad-0"
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 function check {
@@ -34,6 +34,4 @@ done
 
 sleep 5
 echo "Найдено $(cat ~/peers.txt | wc -l) открытых RPC, результат сохранен ~/rpc.txt"
-echo 'peers="'$(echo $(cat ~/peers.txt) | tr ' ' ',')'"' >> ~/rpc.txt
-rm -rf ~/peers.txt
 cat ~/rpc.txt
